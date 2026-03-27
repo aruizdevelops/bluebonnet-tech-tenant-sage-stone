@@ -97,6 +97,8 @@ function AdminShellInner({ children }) {
           component="main"
           sx={{
             flexGrow: 1,
+            minWidth: 0,
+            ml: { md: `${DRAWER_WIDTH}px` },
             width: { md: `calc(100% - ${DRAWER_WIDTH}px)` },
           }}
         >
