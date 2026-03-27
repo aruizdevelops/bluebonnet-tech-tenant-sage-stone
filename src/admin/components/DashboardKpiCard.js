@@ -4,10 +4,10 @@ import { Card, CardContent, Typography, Box } from '@mui/material';
 
 export default function DashboardKpiCard({ title, value, subtitle, icon, color }) {
   return (
-    <Card sx={{ height: '100%' }}>
+    <Card sx={{ height: '100%', overflow: 'hidden' }}>
       <CardContent sx={{ p: 3 }}>
-        <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-          <Box>
+        <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 1 }}>
+          <Box sx={{ minWidth: 0 }}>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5, fontWeight: 500 }}>
               {title}
             </Typography>
@@ -28,6 +28,7 @@ export default function DashboardKpiCard({ title, value, subtitle, icon, color }
                 bgcolor: color ? `${color}14` : 'rgba(124, 154, 110, 0.08)',
                 color: color || 'primary.main',
                 display: 'flex',
+                flexShrink: 0,
               }}
             >
               {icon}
