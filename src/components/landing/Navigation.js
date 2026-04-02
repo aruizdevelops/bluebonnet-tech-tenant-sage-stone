@@ -129,6 +129,26 @@ export default function Navigation() {
               {t(NAV_CTA.labelKey)}
             </Button>
 
+            <Button
+              component="a"
+              href={`${basePath}/admin`}
+              startIcon={<AdminPanelSettingsIcon sx={{ fontSize: 18 }} />}
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                ml: 1.5,
+                color: scrolled ? 'text.secondary' : 'rgba(255,255,255,0.65)',
+                fontWeight: 500,
+                fontSize: '0.8rem',
+                transition: 'color 300ms',
+                '&:hover': {
+                  color: scrolled ? 'text.primary' : '#FFFFFF',
+                  backgroundColor: 'transparent',
+                },
+              }}
+            >
+              Admin Demo
+            </Button>
+
             <IconButton
               aria-label={t('a11y.openNavMenu')}
               edge="end"
