@@ -18,9 +18,12 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import { useTranslation } from '../../i18n/useTranslation';
 import { NAV_ITEMS, NAV_CTA, NAV_BRAND } from '../../constants/navigation';
 import LanguagePicker from '../LanguagePicker';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -192,6 +195,24 @@ export default function Navigation() {
           </ListItem>
           <ListItem disablePadding sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
             <LanguagePicker />
+          </ListItem>
+          <ListItem disablePadding sx={{ mt: 1 }}>
+            <ListItemButton
+              component="a"
+              href={`${basePath}/admin`}
+              onClick={handleNavClick}
+              sx={{ borderRadius: 2, mb: 0.5 }}
+            >
+              <AdminPanelSettingsIcon sx={{ fontSize: 18, mr: 1.5, color: 'text.secondary' }} />
+              <ListItemText
+                primary="Admin Demo"
+                primaryTypographyProps={{
+                  fontWeight: 500,
+                  fontSize: '0.875rem',
+                  color: 'text.secondary',
+                }}
+              />
+            </ListItemButton>
           </ListItem>
         </List>
       </Drawer>
