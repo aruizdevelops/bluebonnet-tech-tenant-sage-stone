@@ -12,20 +12,22 @@ import StoreIcon from '@mui/icons-material/Store';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export function getAdminNavItems(t) {
   return [
-    { label: t('admin.nav.dashboard'), icon: <DashboardIcon />, path: '/admin' },
-    { label: t('admin.nav.services'), icon: <SpaIcon />, path: '/admin/services' },
-    { label: t('admin.nav.categories'), icon: <CategoryIcon />, path: '/admin/categories' },
-    { label: t('admin.nav.bookings'), icon: <EventNoteIcon />, path: '/admin/bookings' },
-    { label: t('admin.nav.leads'), icon: <ContactMailIcon />, path: '/admin/leads' },
-    { label: t('admin.nav.promotions'), icon: <LocalOfferIcon />, path: '/admin/promotions' },
-    { label: t('admin.nav.memberships'), icon: <CardMembershipIcon />, path: '/admin/memberships' },
-    { label: t('admin.nav.giftCards'), icon: <CardGiftcardIcon />, path: '/admin/gift-cards' },
-    { label: t('admin.nav.staff'), icon: <PeopleIcon />, path: '/admin/staff' },
-    { label: t('admin.nav.media'), icon: <PhotoLibraryIcon />, path: '/admin/media' },
-    { label: t('admin.nav.businessInfo'), icon: <StoreIcon />, path: '/admin/business' },
-    { label: t('admin.nav.analytics'), icon: <BarChartIcon />, path: '/admin/analytics' },
-    { label: t('admin.nav.settings'), icon: <SettingsIcon />, path: '/admin/settings' },
+    { label: t('admin.nav.dashboard'), icon: <DashboardIcon />, path: `${basePath}/admin` },
+    { label: t('admin.nav.services'), icon: <SpaIcon />, path: `${basePath}/admin/services` },
+    { label: t('admin.nav.categories'), icon: <CategoryIcon />, path: `${basePath}/admin/categories` },
+    { label: t('admin.nav.bookings'), icon: <EventNoteIcon />, path: `${basePath}/admin/bookings` },
+    { label: t('admin.nav.leads'), icon: <ContactMailIcon />, path: `${basePath}/admin/leads` },
+    { label: t('admin.nav.promotions'), icon: <LocalOfferIcon />, path: `${basePath}/admin/promotions` },
+    { label: t('admin.nav.memberships'), icon: <CardMembershipIcon />, path: `${basePath}/admin/memberships` },
+    { label: t('admin.nav.giftCards'), icon: <CardGiftcardIcon />, path: `${basePath}/admin/gift-cards` },
+    { label: t('admin.nav.staff'), icon: <PeopleIcon />, path: `${basePath}/admin/staff` },
+    { label: t('admin.nav.media'), icon: <PhotoLibraryIcon />, path: `${basePath}/admin/media` },
+    { label: t('admin.nav.businessInfo'), icon: <StoreIcon />, path: `${basePath}/admin/business` },
+    { label: t('admin.nav.analytics'), icon: <BarChartIcon />, path: `${basePath}/admin/analytics` },
+    { label: t('admin.nav.settings'), icon: <SettingsIcon />, path: `${basePath}/admin/settings` },
   ];
 }
